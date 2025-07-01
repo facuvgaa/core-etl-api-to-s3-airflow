@@ -1,0 +1,21 @@
+services:
+  airflow:
+    image: apache/airflow:slim-latest-python3.12
+    container_name: airflow
+    restart: always
+    command: standalone
+    env_file:
+      - .env
+    volumes:
+      - ./src:/opt/airflow/dags
+      #- ./logs:/opt/airflow/logs
+      #- ./plugins:/opt/airflow/plugins
+      #- /data:/opt/airflow/data 
+    ports:
+      # airflow web server
+      - "8080:8080"
+      # airflow scheduler
+      - "8793:8793"
+      # airflow trigger
+      - "8794:8794"
+    
