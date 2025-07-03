@@ -88,7 +88,7 @@ para ejecutar el dag hay que ingresar al aiflow levantado que se ejecuta en
  sudo docker exec -it airflow bash 
  cat simple_auth_manager_passwords.json.generated
 
- # ahi entregara las credenciales de logueo ejemplo {"admin": "gteQPKHS5TPFc9mH"}
+ se muestran las credenciales de logueo ejemplo {"admin": "gteQPKHS5TPFc9mH"}
 
  ejecutar el Dag
 
