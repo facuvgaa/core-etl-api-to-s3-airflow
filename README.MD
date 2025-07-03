@@ -65,9 +65,9 @@ docker-compose up -d
 
 ---
 
-##🔐-variables-de-entorno
+## 🔐-variables-de-entorno
 
- #crear un punto .env con las siguientes credenciales 
+ # crear un punto .env con las siguientes credenciales 
 
 ```bash
 AWS_ACCESS_KEY_ID=your_access_key
@@ -88,7 +88,7 @@ para ejecutar el dag hay que ingresar al aiflow levantado que se ejecuta en
  sudo docker exec -it airflow bash 
  cat simple_auth_manager_passwords.json.generated
 
- #ahi entregara las credenciales de logueo ejemplo {"admin": "gteQPKHS5TPFc9mH"}
+ # ahi entregara las credenciales de logueo ejemplo {"admin": "gteQPKHS5TPFc9mH"}
 
  ejecutar el Dag
 
@@ -121,8 +121,9 @@ Una vez desplegado el DAG en Airflow, se puede ejecutar manualmente o esperar la
 ### Resultado esperado:
 
 - Airflow descarga datos desde la API.
-- Transforma los datos y los guarda en formato `.parquet`.
-- Sube los archivos al bucket de S3 en una ruta como:
+- Transforma los datos y los guarda en formato `.sqlite`.
+- con pandas transforma los datos en la DB y los pasa a csv y luego descarga el archivo csv de s3 y agrega el ultimo dato.
+- sube el archivo csv con los datos ya agregados:
 
 ```bash
 Log message source details: sources=["/opt/airflow/logs/dag_id=dag_extractar_guardar_y_subir/run_id=scheduled__2025-07-02T03:00:00+00:00/task_id=tarea_save/attempt=1.log"]
