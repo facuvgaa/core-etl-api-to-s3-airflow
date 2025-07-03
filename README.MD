@@ -1,10 +1,13 @@
 # 🌐 core-etl-api-to-s3-airflow
 
+
+![Banner del proyecto](/docs/banner.png)
+
 Este proyecto automatiza un pipeline de datos que extrae información desde una API pública, la guarda en una base de datos SQLite, luego la transforma a CSV usando `pandas`, y finalmente la sube a AWS S3.
 
 > 🧰 Usa una biblioteca propia en Python: [`core-extract-and-load`](https://pypi.org/project/core-extract-and-load/) para las operaciones de extracción y guardado.
 
-> ⚙️ Todo el proceso está orquestado mediante un DAG de Apache Airflow y ejecutado en contenedores Docker.
+> ⚙️ Todo el proceso está orquestado mediante un DAG de Apache Airflow y ejecutado en contenedor Docker.
 
 ---
 
@@ -147,7 +150,7 @@ Este proyecto está licenciado bajo la [Licencia MIT](LICENSE).
 ## ✍️ Autor
 
 Desarrollado por **Facundo Vega**  
-📧 Email: facundovega.dev@gmail.com  
+📧 Email: facundo.vega1234@gmail.com  
 💼 GitHub: [facuvgaa](https://github.com/facuvgaa)
 
 🧠 Si te sirvió este proyecto, no olvides dejar una estrella ⭐ en el repositorio.
