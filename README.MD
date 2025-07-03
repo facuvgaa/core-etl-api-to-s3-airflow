@@ -61,16 +61,19 @@ cp .env.example .env
 
 # Levantar Airflow con Docker
 docker-compose up -d
+```bash
 
 ##🔐-variables-de-entorno
 
  #crear un punto .env con las siguientes credenciales 
 
+```bash
 AWS_ACCESS_KEY_ID=your_access_key
 AWS_SECRET_ACCESS_KEY=your_secret_key
 AWS_BUCKET_NAME=your_bucket_name
 DB_PATH=/tmp/demo.db
 S3_FILENAME=output.csv
+```bash
 
 ## 🚀-uso
 
