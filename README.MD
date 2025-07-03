@@ -124,6 +124,7 @@ Una vez desplegado el DAG en Airflow, se puede ejecutar manualmente o esperar la
 - Transforma los datos y los guarda en formato `.parquet`.
 - Sube los archivos al bucket de S3 en una ruta como:
 
+```bash
 Log message source details: sources=["/opt/airflow/logs/dag_id=dag_extractar_guardar_y_subir/run_id=scheduled__2025-07-02T03:00:00+00:00/task_id=tarea_save/attempt=1.log"]
 [2025-07-02, 17:43:16] INFO - DAG bundles loaded: dags-folder: source="airflow.dag_processing.bundles.manager.DagBundlesManager"
 [2025-07-02, 17:43:16] INFO - Filling up the DagBag from /opt/airflow/dags/dag.py: source="airflow.models.dagbag.DagBag"
@@ -133,7 +134,7 @@ Log message source details: sources=["/opt/airflow/logs/dag_id=dag_extractar_gua
 [2025-07-02, 17:43:17] INFO - Descargado: s3://guardado-dolar/archivo.csv: chan="stdout": source="task"
 [2025-07-02, 17:43:17] INFO - Subido a s3://guardado-dolar/archivo.csv: chan="stdout": source="task"
 [2025-07-02, 17:43:17] INFO - Done. Returned value was: None: source="airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator"
-
+```
 ---
 
 ## 📝 Licencia
