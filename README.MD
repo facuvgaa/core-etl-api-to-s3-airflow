@@ -61,7 +61,9 @@ cp .env.example .env
 
 # Levantar Airflow con Docker
 docker-compose up -d
-```bash
+```
+
+---
 
 ##🔐-variables-de-entorno
 
@@ -73,8 +75,8 @@ AWS_SECRET_ACCESS_KEY=your_secret_key
 AWS_BUCKET_NAME=your_bucket_name
 DB_PATH=/tmp/demo.db
 S3_FILENAME=output.csv
-```bash
-
+```
+---
 ## 🚀-uso
 
 para ejecutar el dag hay que ingresar al aiflow levantado que se ejecuta en 
@@ -89,6 +91,8 @@ para ejecutar el dag hay que ingresar al aiflow levantado que se ejecuta en
  #ahi entregara las credenciales de logueo ejemplo {"admin": "gteQPKHS5TPFc9mH"}
 
  ejecutar el Dag
+
+---
 
  ## 🔁 Pipeline de datos
 
@@ -107,6 +111,8 @@ El pipeline está desarrollado en Apache Airflow y sigue el patrón ETL (Extract
    - se descarga el archivo csv que esta en S3 se agrega los ultimos datos y se vuelve a subir el archivo modificado.
 
 Este proceso está automatizado mediante un DAG de Airflow que se ejecuta según una programación definida y puede monitorearse desde la interfaz web de Airflow.
+
+---
 
 ## 🧪 Ejemplo de ejecución
 
@@ -128,10 +134,13 @@ Log message source details: sources=["/opt/airflow/logs/dag_id=dag_extractar_gua
 [2025-07-02, 17:43:17] INFO - Subido a s3://guardado-dolar/archivo.csv: chan="stdout": source="task"
 [2025-07-02, 17:43:17] INFO - Done. Returned value was: None: source="airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator"
 
+---
 
 ## 📝 Licencia
 
 Este proyecto está licenciado bajo la [Licencia MIT](LICENSE).
+
+---
 
 ## ✍️ Autor
 
@@ -141,6 +150,7 @@ Desarrollado por **Facundo Vega**
 
 🧠 Si te sirvió este proyecto, no olvides dejar una estrella ⭐ en el repositorio.
 
+---
 
 ##📎-recursos
 
@@ -150,6 +160,6 @@ Desarrollado por **Facundo Vega**
 - SDK de [Amazon S3 (boto3)](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html)
 - pandas sql to csv [pandas to csv](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_csv.html/)
 
-
+---
 
 
